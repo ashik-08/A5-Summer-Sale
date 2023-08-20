@@ -42,3 +42,7 @@ document.getElementById('sports-cates').addEventListener('click', addNewItem);
 document.getElementById('single-relax-chair').addEventListener('click', addNewItem);
 document.getElementById('children-play').addEventListener('click', addNewItem);
 document.getElementById('flexible-sofa').addEventListener('click', addNewItem);
+
+// Insert coupon
+
+document.getElementById('apply-coupon').addEventListener('click', applyCoupon);
