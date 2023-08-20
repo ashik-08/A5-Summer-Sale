@@ -85,7 +85,10 @@
           <!-- Kitchenware card container -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             <!-- Utensil Holder -->
-            <div class="bg-white rounded-lg p-5 text-center mx-auto">
+            <div
+              id="utensil-holder"
+              class="bg-white rounded-lg p-5 text-center mx-auto"
+            >
               <figure
                 class="bg-card-img-bg rounded-lg w-[260px] 2xl:w-[300px] h-[200px] flex justify-center items-center mb-6"
               >
@@ -125,7 +128,10 @@
               </p>
             </div>
             <!-- Chopping Board -->
-            <div class="bg-white rounded-lg p-5 text-center mx-auto">
+            <div
+              id="chopping-board"
+              class="bg-white rounded-lg p-5 text-center mx-auto"
+            >
               <figure
                 class="bg-card-img-bg rounded-lg w-[260px] 2xl:w-[300px] h-[200px] flex justify-center items-center mb-6"
               >
@@ -165,7 +171,10 @@
               </p>
             </div>
             <!-- Home Cooker -->
-            <div class="bg-white rounded-lg p-5 text-center mx-auto">
+            <div
+              id="home-cooker"
+              class="bg-white rounded-lg p-5 text-center mx-auto"
+            >
               <figure
                 class="bg-card-img-bg rounded-lg w-[260px] 2xl:w-[300px] h-[200px] flex justify-center items-center mb-6"
               >
@@ -216,7 +225,10 @@
           <!-- Sportswear card container -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             <!-- Sports Black Cap -->
-            <div class="bg-white rounded-lg p-5 text-center mx-auto">
+            <div
+              id="sports-black-cap"
+              class="bg-white rounded-lg p-5 text-center mx-auto"
+            >
               <figure
                 class="bg-card-img-bg rounded-lg w-[260px] 2xl:w-[300px] h-[200px] flex justify-center items-center mb-6"
               >
@@ -256,7 +268,10 @@
               </p>
             </div>
             <!-- Full Jersey Set -->
-            <div class="bg-white rounded-lg p-5 text-center mx-auto">
+            <div
+              id="full-jersey-set"
+              class="bg-white rounded-lg p-5 text-center mx-auto"
+            >
               <figure
                 class="bg-card-img-bg rounded-lg w-[260px] 2xl:w-[300px] h-[200px] flex justify-center items-center mb-6"
               >
@@ -296,7 +311,10 @@
               </p>
             </div>
             <!-- Sports Cates -->
-            <div class="bg-white rounded-lg p-5 text-center mx-auto">
+            <div
+              id="sports-cates"
+              class="bg-white rounded-lg p-5 text-center mx-auto"
+            >
               <figure
                 class="bg-card-img-bg rounded-lg w-[260px] 2xl:w-[300px] h-[200px] flex justify-center items-center mb-6"
               >
@@ -347,7 +365,10 @@
           <!-- Furniture card container -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             <!-- Single Relax Chair -->
-            <div class="bg-white rounded-lg p-5 text-center mx-auto">
+            <div
+              id="single-relax-chair"
+              class="bg-white rounded-lg p-5 text-center mx-auto"
+            >
               <figure
                 class="bg-card-img-bg rounded-lg w-[260px] 2xl:w-[300px] h-[200px] flex justify-center items-center mb-6"
               >
@@ -391,7 +412,10 @@
               </p>
             </div>
             <!-- Children Play -->
-            <div class="bg-white rounded-lg p-5 text-center mx-auto">
+            <div
+              id="children-play"
+              class="bg-white rounded-lg p-5 text-center mx-auto"
+            >
               <figure
                 class="bg-card-img-bg rounded-lg w-[260px] 2xl:w-[300px] h-[200px] flex justify-center items-center mb-6"
               >
@@ -431,7 +455,10 @@
               </p>
             </div>
             <!-- Flexible Sofa -->
-            <div class="bg-white rounded-lg p-5 text-center mx-auto">
+            <div
+              id="flexible-sofa"
+              class="bg-white rounded-lg p-5 text-center mx-auto"
+            >
               <figure
                 class="bg-card-img-bg rounded-lg w-[260px] 2xl:w-[300px] h-[200px] flex justify-center items-center mb-6"
               >
@@ -500,35 +527,21 @@
           </div>
           <!-- Price -->
           <div class="bg-white text-2xl font-medium p-6 rounded-lg">
-            <ol class="ml-6 mb-4 list-decimal">
-              <li>New</li>
-            </ol>
+            <ol id="list-item-container" class="ml-6 mb-4 list-decimal"></ol>
             <div class="border-y space-y-2 py-4 mb-5">
-              <p>Total Price: <span class="text-sec-text">0.00 TK</span></p>
-              <p>Discount: <span class="text-sec-text">0.00 TK</span></p>
-              <p>Total: <span class="text-sec-text">0.00 TK</span></p>
+              <p>
+                Total Price:
+                <span id="total-price" class="text-sec-text">0.00 TK</span>
+              </p>
+              <p>
+                Discount:
+                <span id="discount" class="text-sec-text">0.00 TK</span>
+              </p>
+              <p>
+                Total: <span id="total" class="text-sec-text">0.00 TK</span>
+              </p>
             </div>
           </div>
-
-          <!-- Modal -->
-          <!-- <div>
-           The button to open modal
-          <button disabled>
-          <a href="#my_modal_8" id="confirm-purchase"
-          class="bg-spe-text text-white text-xl font-semibold px-20 py-3.5 rounded-lg relative -top-9 left-[26px]">Make Purchase</a>
-        </button>
-
-          <div class="modal" id="my_modal_8">
-            <div class="modal-box text-center py-24">
-                <img class="mx-auto" src="./images/congo.png" alt="congo">
-                <h3 class="text-4xl md:text-5xl font-bold mt-10">Congratulations</h3>
-              <p class="text-xl font-normal pt-5 pb-10">Your Purchased the product</p>
-              <div class="">
-                <a href="./index.html" class="bg-spe-text text-white text-xl font-semibold px-6 py-3 rounded-lg">Go Home</a>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
           <!-- Open the modal using ID.showModal() method -->
           <div>
