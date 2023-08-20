@@ -73,7 +73,7 @@ function addNewItem(event) {
     if (newTotalPrice > 0) {
       makePurchaseButton.removeAttribute("disabled");
     } else {
-      makePurchaseButton.setAttribute("disabled");
+      makePurchaseButton.setAttribute("disabled", "true");
     }
 
     // make coupon apply active
@@ -82,7 +82,7 @@ function addNewItem(event) {
     if (newTotalPrice >= 200) {
       applyCouponButton.removeAttribute("disabled");
     } else {
-      applyCouponButton.setAttribute("disabled");
+      applyCouponButton.setAttribute("disabled", "true");
     }
     usedCoupon = false;
   }
