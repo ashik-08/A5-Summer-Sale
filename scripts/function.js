@@ -1,3 +1,39 @@
+let usedCoupon = false;
+
+// function for applying coupon and get discount
+
+function applyCoupon() {
+  // capture coupon input field value
+  const couponInputField = document.getElementById("coupon-input-field");
+  const couponInputValue = couponInputField.value;
+
+  if (couponInputValue === "SELL200") {
+    if (usedCoupon) {
+      alert("You already entered a coupon");
+      couponInputField.value = "";
+    } else {
+      usedCoupon = true;
+
+      // capture previous price
+      const previousTotalPrice = document.getElementById("total-price").innerText.split(" ")[0];
+
+      // apply discount
+      const discountAmount = parseFloat(previousTotalPrice) * 0.2;
+      document.getElementById("discount").innerText = parseFloat(discountAmount).toFixed(2) + " " + "TK";
+
+      // show updated price
+      const total = document.getElementById("total").innerText.split(" ")[0];
+      const discountedTotal = parseFloat(total) - parseFloat(discountAmount);
+      document.getElementById("total").innerText = parseFloat(discountedTotal).toFixed(2) + " " + "TK";
+
+      couponInputField.value = "";
+    }
+  } else {
+    alert("Invalid Coupon");
+    couponInputField.value = "";
+  }
+}
+
 // function for add new item to cart
 
 function addNewItem(event) {
@@ -28,6 +64,9 @@ function addNewItem(event) {
     document.getElementById("total-price").innerText = parseFloat(newTotalPrice).toFixed(2) + " " + "TK";
     document.getElementById("total").innerText = parseFloat(newTotal).toFixed(2) + " " + "TK";
 
+    // set discount price to zero when add new item to the cart
+    document.getElementById("discount").innerText = parseFloat(0).toFixed(2) + " " + "TK";
+
     // make purchase button active
     const makePurchaseButton = document.getElementById("confirm-purchase");
 
@@ -45,37 +84,6 @@ function addNewItem(event) {
     } else {
       applyCouponButton.setAttribute("disabled");
     }
-  }
-}
-
-let usedCoupon = false;
-
-function applyCoupon() {
-  // capture coupon input field value
-  const couponInputField = document.getElementById("coupon-input-field");
-  const couponInputValue = couponInputField.value;
-
-  if (couponInputValue === "SELL200") {
-    if (usedCoupon) {
-      alert("You already entered a coupon");
-    } else {
-      usedCoupon = true;
-
-      // capture previous price
-      const previousTotalPrice = document.getElementById("total-price").innerText.split(" ")[0];
-
-      // apply discount
-      const discountAmount = parseFloat(previousTotalPrice) * 0.2;
-      document.getElementById("discount").innerText = parseFloat(discountAmount).toFixed(2) + " " + "TK";
-
-      // show updated price
-      const total = document.getElementById("total").innerText.split(" ")[0];
-      const discountedTotal = parseFloat(total) - parseFloat(discountAmount);
-      document.getElementById("total").innerText = parseFloat(discountedTotal).toFixed(2) + " " + "TK";
-
-      couponInputField.value = "";
-    }
-  } else {
-    alert("Invalid Coupon");
+    usedCoupon = false;
   }
 }
